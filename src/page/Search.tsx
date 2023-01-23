@@ -37,7 +37,12 @@ export default function Search() {
       <Box w="100%" h="75vh" alignItems="center" justifyContent="center">
         <VStack spacing="10" align="center" h="75vh">
           <Box bg="transparent" display="flex" alignItems="center">
-            <Image src="image.svg" alt="logo" width="80px" height="80px" />
+            <Image
+              src="https://muuptphz7uqzpuriuqg4ec5c277fjfbw6exnfm3naybsgdmu56va.arweave.net/ZSj5vPn9IZfSKKQNwgui1_5UlDbxLtKzbQYDIw2U76o"
+              alt="logo"
+              width="80px"
+              height="80px"
+            />
             <Text ml={5} fontSize="xx-large" color="black" paddingLeft={"-20"}>
               arJournal
             </Text>

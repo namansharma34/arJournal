@@ -12,6 +12,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
   },
+  {
+    path: "*",
+    element: <Search />,
+  },
 ]);
 const App = () => {
   return (

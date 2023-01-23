@@ -7,7 +7,10 @@ const Footer = () => (
         <FaGithub size={"30px"} color="black" />
       </Box>
       <Box>
-        <Image src='perma.svg' boxSize={"100px"} />
+        <Image
+          src="https://6nlsovk34tsk2qp66xvs5zb2m65nyzu4tiygc5rtyzgz64mheeca.arweave.net/81cnVVvk5K1B_vXrLuQ6Z7rcZpyaMGF2M8ZNn3GHIQQ"
+          boxSize={"100px"}
+        />
       </Box>
       <Box paddingRight={"5"} paddingTop={"10"}>
         <FaDiscord size={"30px"} color="black" />

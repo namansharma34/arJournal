@@ -30,7 +30,7 @@ export default function MyForm() {
     let reader = new FileReader();
     reader.onload = function (event) {
       //@ts-ignore
-      setFile(new Uint8Array(event.target?.result))
+      setFile(new Uint8Array(event.target?.result));
     };
     reader.readAsArrayBuffer(file);
   };

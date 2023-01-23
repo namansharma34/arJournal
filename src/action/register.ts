@@ -1,4 +1,6 @@
+import { redirect } from "react-router-dom";
 import useFiled from "../store/useFiled";
+import useRedirect from "../store/useRedirect";
 import useRegister from "../store/useRegister";
 import { contractTxId, _warp } from "../utils/config";
 const register = async () => {
@@ -38,7 +40,7 @@ const register = async () => {
         await uploader.uploadChunk();
       }
       setUploading(false);
-      window.location.reload();
+      useRedirect.setState({ location: "register" });
     }
   } else {
     setError("Some Fileds Are Missing");

@@ -37,7 +37,7 @@ export default function TTable() {
             </Thead>
             <Tbody>
               {data === false ? (
-                <Heading as="h2" size="lg">
+                <Heading as="h2" size="lg" paddingLeft={"10"}>
                   Register Your First Journal
                 </Heading>
               ) : data?.length ? (

@@ -1,4 +1,4 @@
-import { LoggerFactory, Warp, WarpFactory } from "warp-contracts";
+import { LoggerFactory, WarpFactory } from "warp-contracts";
 export default async function config() {
   const warp = WarpFactory.forMainnet();
   if (await warp.arweave.network.getInfo()) {
