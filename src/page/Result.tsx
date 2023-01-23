@@ -10,19 +10,17 @@ import {
   Button,
   Table,
   Thead,
-  Tbody,
-  Tfoot,
   Tr,
   Th,
-  Td,
-  TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import useData from "../store/useData";
+import { FaLink } from "react-icons/fa";
+import useSearchData from "../store/useSearchData";
 export default function Result() {
   const [open, setOpen] = useState(true);
-  const data = useData((state) => state.db);
+  const data = useSearchData((state) => state.db);
+  const sset = useSearchData((state) => state.setDB);
   const { onClose } = useDisclosure();
   return (
     <>
@@ -30,7 +28,12 @@ export default function Result() {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Search Result</ModalHeader>
-          <ModalCloseButton onClick={() => setOpen(false)} />
+          <ModalCloseButton
+            onClick={() => {
+              setOpen(false);
+              sset(undefined);
+            }}
+          />
           <ModalBody>
             <TableContainer>
               <Table variant="striped" colorScheme="blue">
@@ -57,20 +60,7 @@ export default function Result() {
                               href={`https://arweave.net/${e.id}`}
                               target="_blank"
                             >
-                              <svg
-                                aria-hidden="true"
-                                fill="none"
-                                stroke="green"
-                                stroke-width="1.5"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                ></path>
-                              </svg>
+                              <FaLink color="green" />
                             </a>
                           </Th>
                         </Tr>
@@ -81,7 +71,14 @@ export default function Result() {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={() => setOpen(false)}>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={() => {
+                setOpen(false);
+                sset(undefined);
+              }}
+            >
               Close
             </Button>
           </ModalFooter>

@@ -1,4 +1,4 @@
-import useData from "../store/useData";
+import useSearchData from "../store/useSearchData";
 import useFiled from "../store/useFiled";
 import { contractTxId, _warp } from "../utils/config";
 import { DB as DbState } from "../utils/config";
@@ -7,10 +7,10 @@ const search = async () => {
   const filed = useFiled.getState().filed;
   const subject = useFiled.getState().subject;
   const setError = useFiled.getState().setError;
-  const set_d = useData.getState().setDB;
+  const set_d = useSearchData.getState().setDB;
   const setSearching = useFiled.getState().setSearching;
   setError(undefined);
-  useData.setState({ db: undefined });
+  useSearchData.setState({ db: undefined });
   setSearching(true);
   if (text?.length) {
     const warp = _warp;

@@ -18,8 +18,8 @@ import useFiled from "../store/useFiled";
 import search from "../action/search";
 import AAlert from "../component/Alert";
 import NavBar from "../component/NavBar";
-import useData from "../store/useData";
 import Result from "./Result";
+import useSearchData from "../store/useSearchData";
 export default function Search() {
   const text = useFiled((state) => state.text);
   const setText = useFiled((state) => state.setText);
@@ -29,7 +29,7 @@ export default function Search() {
   const setFiled = useFiled((state) => state.setFiled);
   const width = useBreakpointValue({ base: "70vw", md: "50vw", lg: "30vw" });
   const error = useFiled((state) => state.error);
-  const db = useData((state) => state.db);
+  const db = useSearchData((state) => state.db);
   const searching = useFiled((state) => state.searching);
   return (
     <>
