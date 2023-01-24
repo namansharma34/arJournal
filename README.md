@@ -6,6 +6,6 @@
 
 ### Uses Smartweave for indexing the transcation id which helps to find the transcation in easy way. It also work like a decentrazlied database.
 
-[demo](https://epxd6wrts6dmdpjnqlrlgnzt5cn3omylltmf6or5tfu6qvac647a.arweave.net/I-4_WjOXhsG9LYLiszcz6Ju3Mwtc2F86PZlp6FQC9z4).
+[demo](https://lq2jz4rylileck2sd44dvgqg6tfxb54kurimosvpxcuendrhtmga.arweave.net/XDSc8jhaFkErUh84OpoG9Mtw94qkUMdKr7ioRo4nmww).
 
 #### !It is prototype which only accepts pdf right now. It won't be mobile browser compitable. Wait for another release and update.
